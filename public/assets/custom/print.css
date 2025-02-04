@@ -1,0 +1,160 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+}
+
+@page {
+    margin: 0;
+}
+
+html {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+body {
+    margin: 0;
+}
+
+.sheet {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/** Paper sizes **/
+body.Sales-Receipt .sheet {
+    width: 80mm;
+}
+
+body.Barcode .sheet {
+    width: 50mm;
+}
+
+body.A3 .sheet {
+    width: 297mm;
+}
+
+body.A3.landscape .sheet {
+    width: 420mm;
+}
+
+body.A4 .sheet {
+    width: 210mm;
+}
+
+body.A4.landscape .sheet {
+    width: 297mm;
+}
+
+body.A5 .sheet {
+    width: 148mm;
+}
+
+body.A5.landscape .sheet {
+    width: 210mm;
+}
+
+body.dot-matrix .sheet {
+    width: 220mm;
+}
+
+body.letter .sheet {
+    width: 216mm;
+}
+
+body.letter.landscape .sheet {
+    width: 280mm;
+}
+
+body.legal .sheet {
+    width: 216mm;
+}
+
+body.legal.landscape .sheet {
+    width: 357mm;
+}
+
+/** For screen preview **/
+@media screen {
+    body {
+        background: #e0e0e0;
+    }
+
+    .sheet {
+        background: white;
+        box-shadow: 0 .5mm 2mm rgba(0, 0, 0, .3);
+        margin: 5mm auto;
+    }
+}
+
+/** Fix for Chrome issue #273306 **/
+@media print {
+    body.A3.landscape {
+        width: 420mm;
+    }
+
+    body.A3,
+    body.A4.landscape {
+        width: 297mm;
+    }
+
+    body.A4,
+    body.A5.landscape {
+        width: 210mm;
+    }
+
+    body.A5 {
+        width: 148mm;
+    }
+
+    body.dot-matrix {
+        width: 220mm;
+    }
+
+    body.letter,
+    body.legal {
+        width: 216mm;
+    }
+
+    body.letter.landscape {
+        width: 280mm;
+    }
+
+    body.legal.landscape {
+        width: 357mm;
+    }
+}
+
+.table {
+    --bs-table-border-color: black;
+}
+
+.table-light {
+    border-color: black;
+}
+
+.table.no-padding>:not(caption)>*>* {
+    padding: 0px;
+}
+
+.table>:not(caption)>*>* {
+    padding: 3px 9px;
+}
+
+hr {
+    opacity: 1;
+}
+
+.fs-9pt * {
+    font-size: 9pt;
+}
+
+.mb-signature {
+    margin-bottom: 80px;
+}
+
+body.Sales-Receipt .sheet * {
+    font-size: 9pt;
+}

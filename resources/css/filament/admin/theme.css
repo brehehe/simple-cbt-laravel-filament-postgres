@@ -1,0 +1,440 @@
+/* Imports and Configurations */
+@import '/vendor/filament/filament/resources/css/theme.css';
+@config 'tailwind.config.js';
+
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
+
+/* Font Family */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 3px;
+}
+
+/* Root Variables */
+:root {
+    --sidebar-width: 17.55rem !important;
+}
+
+/* ==========================================================================
+   Layout Components
+   ========================================================================== */
+
+/* Main Container */
+.fi-main {
+    min-height: 81vh;
+}
+
+/* Topbar */
+.fi-topbar {
+    backdrop-filter: blur(12px) !important;
+}
+
+.fi-topbar nav,
+.fi-modal-close-overlay {
+    background-color: transparent !important;
+}
+
+/* Sidebar */
+.fi-sidebar-nav .fi-sidebar-nav-groups {
+    row-gap: 0.7rem !important;
+}
+
+/* Simple Layout */
+.fi-simple-layout {
+    background: url('../../../image/bg-login.jpg') no-repeat fixed center !important;
+}
+
+.fi-simple-main {
+    background: #ffffff0f !important;
+    backdrop-filter: blur(60px) !important;
+    border-radius: 38px !important;
+}
+
+.gap-6 {
+    gap: 1rem !important;
+}
+
+.fi-badge span {
+    font-size: 11.5px !important;
+}
+
+.dark\:bg-gray-700:is(.dark *) {
+    background-color: rgb(44, 64, 96);
+}
+
+.fi-in-entry-wrp .grid.gap-y-2 {
+    row-gap: .1rem !important;
+}
+
+dt.fi-in-entry-wrp-label span {
+    font-weight: normal !important;
+}
+
+.fi-in-text .fi-in-affixes .fi-in-text-item div {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+
+.fi-in-text .fi-in-affixes span.fi-badge {
+    padding: 0.3rem 0.5rem !important;
+    line-height: 1.4rem !important;
+}
+
+/* ==========================================================================
+   Table Styles
+   ========================================================================== */
+
+/* Table Headers */
+.fi-ta-header-cell-label,
+.fi-table-header-group-cell,
+thead tr th {
+    text-transform: uppercase !important;
+}
+
+/* Custom Table */
+table.custom-table {
+    white-space: nowrap;
+    border-radius: .75rem;
+    width: 100%;
+    text-align: left;
+}
+
+/* Table Cell Spacing */
+table tbody td .fi-ta-text {
+    padding-top: .45rem !important;
+    padding-bottom: .45rem !important;
+    row-gap: 0 !important;
+}
+
+table thead tr th.fi-ta-header-cell:first-child {
+    padding-inline-start: .75rem !important;
+}
+
+table thead tr th.fi-ta-header-cell:last-child {
+    padding-inline-end: .75rem !important;
+}
+
+table tbody tr td.fi-ta-cell:first-child,
+table thead tr th.fi-ta-cell:first-child {
+    padding-inline-start: 0 !important;
+}
+
+table tbody tr td.fi-ta-cell:last-child {
+    padding-inline-end: 0 !important;
+}
+
+/* Table Typography */
+table th,
+table th * {
+    font-size: 13px !important;
+}
+
+table td,
+table td * {
+    font-size: 12.5px !important;
+}
+
+/* Table Borders */
+table th:not(:first-of-type),
+table td:not(:first-of-type) {
+    border-left: 1px solid;
+}
+
+table th:not(:last-of-type),
+table td:not(:last-of-type) {
+    border-right: 1px solid;
+}
+
+/* Custom Table Padding */
+table.custom-table th,
+table.custom-table td {
+    padding-left: .75rem;
+    padding-right: .75rem;
+    color: white;
+}
+
+table.custom-table th {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+table.custom-table td {
+    padding-top: .45rem;
+    padding-bottom: .45rem;
+}
+
+/* Custom Table Border Radius */
+table.custom-table tr:first-child th:first-child {
+    border-top-left-radius: .75rem;
+}
+
+table.custom-table tr:first-child th:nth-last-child(1) {
+    border-top-right-radius: .75rem;
+}
+
+table.custom-table tr:last-child td:first-child {
+    border-bottom-left-radius: .75rem;
+}
+
+table.custom-table tr:last-child td:last-child {
+    border-bottom-right-radius: .75rem;
+}
+
+table.custom-table tr {
+    border-bottom-width: 1px;
+}
+
+/* ==========================================================================
+   Form Elements
+   ========================================================================== */
+
+/* Input Wrappers */
+.fi-input-wrp:has(select:disabled),
+.fi-input-wrp:has(input:disabled),
+.fi-input-wrp:has(.choices.is-disabled) {
+    background-color: transparent !important;
+}
+
+.choices.is-disabled,
+select,
+input,
+.fi-input-wrp:has(select:disabled),
+.fi-input-wrp:has(input:disabled),
+.fi-input-wrp:has(.choices.is-disabled) {
+    border-radius: 7px !important;
+}
+
+/* Form Labels */
+.fi-fo-field-wrp-label span {
+    text-transform: uppercase !important;
+}
+
+/* Modal Styles */
+.fi-modal.fi-modal-open .fi-modal-close-overlay {
+    background-color: #0f172a96 !important;
+}
+
+.choices__item,
+select,
+input {
+    font-size: 13px !important;
+}
+
+select:disabled,
+input:disabled,
+.choices.is-disabled {
+    border: solid 1px #ffffff26;
+}
+
+.choices {
+    text-align: left !important;
+}
+
+/* ==========================================================================
+   Light Mode Styles
+   ========================================================================== */
+
+html:not(.dark) {
+
+    /* Body and Background */
+    body {
+        background-color: #f8f7fa !important;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar-track {
+        background: white;
+    }
+
+    /* Sidebar */
+    aside,
+    .fi-sidebar-header {
+        background-color: #ffffff !important;
+    }
+
+    .fi-sidebar-item.fi-active.fi-sidebar-item-active a .fi-sidebar-item-icon,
+    .fi-sidebar-item.fi-active.fi-sidebar-item-active a .fi-sidebar-item-label {
+        color: #404350 !important;
+    }
+
+    .fi-sidebar-item-icon,
+    .fi-sidebar-item-label {
+        color: #6a6d75 !important;
+    }
+
+    /* Table Styles */
+    table thead tr {
+        background-color: rgb(249 250 251) !important;
+    }
+
+    table th,
+    table td {
+        border-color: rgb(229 231 235) !important;
+    }
+
+    /* Custom Table */
+    table.custom-table {
+        background-color: white;
+    }
+
+    table.custom-table th,
+    table.custom-table td {
+        color: black;
+    }
+
+    table.custom-table thead tr {
+        background-color: #fafafa;
+    }
+
+    table.custom-table tr {
+        border-color: #e4e4e7;
+    }
+
+    /* Form Elements */
+    .fi-input-wrp select:disabled,
+    .fi-input-wrp input:disabled,
+    .fi-input-wrp .choices.is-disabled {
+        background-color: #e9ecef !important;
+        -webkit-text-fill-color: #656565 !important;
+        color: #656565 !important;
+    }
+
+    /* Simple Layout */
+    .fi-simple-main .fi-simple-header-heading,
+    .fi-simple-main .fi-fo-field-wrp-label span {
+        color: white !important;
+    }
+}
+
+/* ==========================================================================
+   Dark Mode Styles
+   ========================================================================== */
+
+html.dark {
+
+    /* Form Elements */
+    .fi-input-wrp select:disabled,
+    .fi-input-wrp input:disabled,
+    .fi-input-wrp .choices.is-disabled {
+        background-color: #2e3543 !important;
+        -webkit-text-fill-color: #c6c6c6 !important;
+        color: #c6c6c6 !important;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar-track {
+        background: #1e293b;
+    }
+
+    /* Background Colors */
+    .dark-color,
+    .fi-ta-ctn,
+    .fi-section,
+    .fi-dropdown-panel,
+    .fi-tabs,
+    .fi-ta-record,
+    table.custom-table,
+    .fi-ta-content::-webkit-scrollbar-track,
+    .fi-no-notification,
+    .fi-fo-wizard,
+    .fi-wi-stats-overview-stat,
+    .fi-sidebar-header,
+    .fi-sidebar {
+        background-color: #1e293b !important;
+    }
+
+    /* Layout Components */
+    body,
+    aside,
+    .fi-modal-header,
+    .fi-modal-content,
+    .fi-modal-footer,
+    .fi-fo-date-time-picker-panel,
+    .fi-modal-window,
+    .fi-fo-date-time-picker-panel select.grow {
+        background-color: #0f172a !important;
+    }
+
+    /* Sidebar */
+    .fi-sidebar-item.fi-active.fi-sidebar-item-active a .fi-sidebar-item-icon,
+    .fi-sidebar-item.fi-active.fi-sidebar-item-active a .fi-sidebar-item-label {
+        color: white !important;
+    }
+
+    .fi-sidebar-item-icon,
+    .fi-sidebar-item-label {
+        color: #cdd7e4 !important;
+    }
+
+    /* Table Styles */
+    table.custom-table th,
+    table.custom-table td {
+        color: white;
+    }
+
+    table.custom-table thead {
+        background-color: #293445;
+    }
+
+    table.custom-table tr {
+        border-color: #e4e4e714;
+    }
+
+    table th,
+    table td {
+        border-color: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    table thead tr {
+        background-color: rgb(255 255 255 / 0.05) !important;
+    }
+
+    /* Dropdown and Choices */
+    .choices__list.choices__list--dropdown {
+        background-color: #1b2334;
+    }
+
+    .choices__placeholder {
+        background-color: transparent !important;
+    }
+
+    /* Modal */
+    .fi-modal-window .fi-modal-header {
+        border-radius: 14px 14px 0 0;
+    }
+
+    .fi-modal-window .fi-modal-footer {
+        border-radius: 0 0 14px 14px;
+    }
+}
+
+/* Warna untuk tombol yang belum dipilih */
+.btn.belum {
+    background-color: #D3D3D3; /* Warna abu-abu untuk 'belum' */
+}
+
+/* Warna untuk tombol yang ragu-ragu */
+.btn.ragu-ragu {
+    background-color: #FF9800; /* Warna oranye untuk 'ragu-ragu' */
+}
+
+/* Warna untuk tombol yang terpilih */
+.btn.terpilih {
+    background-color: #4CAF50; /* Warna hijau untuk 'terpilih' */
+}

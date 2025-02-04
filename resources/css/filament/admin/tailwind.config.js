@@ -1,0 +1,45 @@
+import preset from '../../../../vendor/filament/filament/tailwind.config.preset'
+
+export default {
+    presets: [preset],
+    content: [
+        './app/Filament/**/*.php',
+        './resources/views/filament/**/*.blade.php',
+        './vendor/filament/**/*.blade.php',
+        './vendor/guava/filament-modal-relation-managers/resources/**/*.blade.php',
+    ],
+    safelist: [
+      'bg-green-50',
+      'text-green-500',
+      'text-green-600',
+      'ring-green-600/10',
+      'dark:bg-green-400/10',
+      'dark:text-green-400',
+      'dark:ring-green-400/30',
+      'bg-red-50',
+      'text-red-500',
+      'text-red-600',
+      'ring-red-600/10',
+      'dark:bg-red-400/10',
+      'dark:text-red-400',
+      'dark:ring-red-400/30',
+      'bg-gray-50',
+      'text-gray-500',
+      'text-gray-600',
+      'ring-gray-600/10',
+      'dark:bg-gray-400/10',
+      'dark:text-gray-400',
+      'dark:ring-gray-400/20',
+      'bg-yellow-50',
+      'text-yellow-500',
+      'text-yellow-600',
+      'ring-yellow-600/10',
+      'dark:bg-yellow-400/10',
+      'dark:text-yellow-400',
+      'dark:ring-yellow-400/30',
+      'ps-[23px]',
+      'pe-[23px]',
+      'bg-[#11c2e224]',
+      'bg-[#ef44444d]'
+    ]
+}
