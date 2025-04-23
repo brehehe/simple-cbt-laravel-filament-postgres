@@ -65,15 +65,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## Donasi
-
-Jika Anda merasa proyek ini bermanfaat dan ingin mendukung pengembangannya, Anda dapat memberikan donasi melalui rekening BCA berikut:
-
--   **Bank**: BCA (Bank Central Asia)
--   **Nomor Rekening**: 0881990481
--   **Atas Nama**: Totiyono Nugroho
-
-Jika ada pertanyaan, silakan email saya di totiyono832@gmail.com.
-
-Terima kasih atas dukungan dan kontribusinya! 🙏
 # simple-cbt-laravel-filament-postgres
